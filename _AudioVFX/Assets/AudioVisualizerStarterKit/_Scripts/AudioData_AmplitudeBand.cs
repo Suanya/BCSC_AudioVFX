@@ -6,7 +6,7 @@ using UnityEngine;
 
 public class AudioData_AmplitudeBand : MonoBehaviour
 {
-    AudioSource _audioSource;
+    private AudioSource _audioSource;
     public static float[] _samplesLeft = new float[512];
     public static float[] _samplesRight = new float[512];
 
@@ -59,6 +59,8 @@ public class AudioData_AmplitudeBand : MonoBehaviour
     void Start()
     {
         _audioSource = GetComponent<AudioSource>();
+        //_audioSource.clip = Microphone.Start("Built-in Microphone", true, 10, 44100);
+        //_audioSource.Play();
         AudioProfile(_audioProfile);
     }
 

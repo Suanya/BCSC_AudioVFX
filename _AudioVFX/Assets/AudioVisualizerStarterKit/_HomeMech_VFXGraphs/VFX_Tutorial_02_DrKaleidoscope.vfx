@@ -20,7 +20,7 @@ MonoBehaviour:
       x: 2181
       y: 1327
       width: 361
-      height: 156
+      height: 220
     contents: 'These attractors are what you would use to have particles generate
       along a curve.
 

@@ -1,0 +1,40 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+using System.Collections.Generic; // for using lists
+
+[RequireComponent(typeof(AudioSource))]
+public class MicrophoneInput : MonoBehaviour
+{
+    public int _audioSampleRate = 44100;
+    public int _samples = 8192;
+
+    private List<string> options = new List<string>();
+
+    public AudioSource _audioSource;
+    public string microphone;
+
+    // Start is called before the first frame update
+    void Start()
+    {
+        // get components we need
+        _audioSource = GetComponent<AudioSource>();
+
+        // initialize input with default mic
+        UpdateMicrophone();
+    }
+
+    void UpdateMicrophone()
+    {
+        _audioSource.Stop();
+
+        // start recording the audioClip from the mic
+        _audioSource.clip = Microphone.Start(microphone, true, 10, audioSampleRate);
+        _audioSource.loop = true;
+
+        // mute the sound with an Audio Mixer group because we don't want the player to hear it
+        Debug.Log(Microphone.IsRecording(microphone).ToString());
+
+    }
+    
+}
