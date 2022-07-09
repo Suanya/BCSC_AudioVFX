@@ -2163,8 +2163,7 @@ MonoBehaviour:
   m_UICollapsed: 1
   m_UISuperCollapsed: 0
   title: 
-  m_Owners:
-  - {fileID: 0}
+  m_Owners: []
 --- !u!114 &8926484042661616656
 MonoBehaviour:
   m_ObjectHideFlags: 0
