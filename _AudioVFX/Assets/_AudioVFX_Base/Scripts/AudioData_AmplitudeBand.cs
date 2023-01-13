@@ -34,18 +34,27 @@ public class AudioData_AmplitudeBand : MonoBehaviour
      
        This comes from Peer Play on YouTube @
        "Audio Visualization - Unity/C# Tutorial"
+
+     * *** Denni's Frequency Bands ***
+
+     * [0] 20-90 Hz: Kickdrum
+     * [1] 90-450 Hz: Bässe
+     * [2] 450-2300 Hz: Melodie und Klatschen
+     * [3] 2300-20000 Hz: Zischen und Zwitschern
+
      */
+     
 
 
 
-    public static float[] _freqBand = new float[8];
+    public static float[] _freqBand = new float[4];
 
-    float[] _bandBuffer = new float[8];
-    float[] _bufferDecrease = new float[8];
+    float[] _bandBuffer = new float[4];
+    float[] _bufferDecrease = new float[4];
 
-    float[] _freqBandHighest = new float[8];
-    public static float[] _audioBand = new float[8];
-    public static float[] _audioBandBuffer = new float[8];
+    float[] _freqBandHighest = new float[4];
+    public static float[] _audioBand = new float[4];
+    public static float[] _audioBandBuffer = new float[4];
 
     public float Amplitude, AmplitudeBuffer;
 
@@ -76,7 +85,7 @@ public class AudioData_AmplitudeBand : MonoBehaviour
 
     void AudioProfile(float audioProfile)
     {
-        for (int i = 0; i < 8; i++)
+        for (int i = 0; i < 4; i++)
         {
             _freqBandHighest[i] = audioProfile;
         }
@@ -91,11 +100,11 @@ public class AudioData_AmplitudeBand : MonoBehaviour
     void MakeFrequencyBands()
     {
         int count = 0;
-        for (int i = 0; i < 8; i++)
+        for (int i = 0; i < 4; i++)
         {
             float average = 0;
             int sampleCount = (int)Mathf.Pow(2, i) * 2;
-            if (i == 7)
+            if (i == 3)
             {
                 sampleCount += 2;
             }
@@ -125,7 +134,7 @@ public class AudioData_AmplitudeBand : MonoBehaviour
     //the audio signal is pushing up the blocks and there's almost like an air cushion inside of them as they ease down
     void BandBuffer()
     {
-        for (int g = 0; g < 8; ++g)
+        for (int g = 0; g < 4; ++g)
         {
             if (_freqBand[g] > _bandBuffer[g])
             {
@@ -142,7 +151,7 @@ public class AudioData_AmplitudeBand : MonoBehaviour
 
     void CreateAudioBands()
     {
-        for (int i = 0; i < 8; i++)
+        for (int i = 0; i < 4; i++)
         {
             if (_freqBand[i] > _freqBandHighest[i])
             { 
@@ -158,7 +167,7 @@ public class AudioData_AmplitudeBand : MonoBehaviour
     {
         float _CurrentAmplitude = 0;
         float _CurrentAmplitudeBuffer = 0;
-        for (int i = 0; i < 8; i++)
+        for (int i = 0; i < 4; i++)
         {
             _CurrentAmplitude += _audioBand[i];
             _CurrentAmplitudeBuffer += _audioBandBuffer[i];
