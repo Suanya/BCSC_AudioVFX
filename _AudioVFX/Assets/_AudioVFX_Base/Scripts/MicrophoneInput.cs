@@ -21,6 +21,11 @@ public class MicrophoneInput : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        foreach (var device in Microphone.devices)
+        {
+            Debug.Log("Name: " + device);
+        }
+
         // get components we need
         _audioSource = GetComponent<AudioSource>();
 
@@ -28,12 +33,19 @@ public class MicrophoneInput : MonoBehaviour
         UpdateMicrophone();
     }
 
+    /*
+    private void Update()
+    {
+        Debug.Log("isPlaying " + _audioSource.isPlaying);
+    }
+    */
+
     void UpdateMicrophone()
     {
         _audioSource.Stop();
 
         // start recording the audioClip from the mic
-        _audioSource.clip = Microphone.Start(microphone, true, 10, _audioSampleRate);
+        _audioSource.clip = Microphone.Start(microphone, true, 1, _audioSampleRate);
         _audioSource.loop = true;
 
         // mute the sound with an Audio Mixer group because we don't want the player to hear it

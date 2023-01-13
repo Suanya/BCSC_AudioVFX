@@ -68,7 +68,7 @@ public class AudioData_AmplitudeBand : MonoBehaviour
     void Start()
     {
         _audioSource = GetComponent<AudioSource>();
-        //_audioSource.clip = Microphone.Start("Built-in Microphone", true, 10, 44100);
+        _audioSource.clip = Microphone.Start("Built-in Microphone", true, 10, 44100);
         //_audioSource.Play();
         AudioProfile(_audioProfile);
     }

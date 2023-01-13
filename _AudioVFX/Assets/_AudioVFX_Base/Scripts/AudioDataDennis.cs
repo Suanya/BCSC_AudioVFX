@@ -43,8 +43,8 @@ public class AudioDataDennis : MonoBehaviour
     void Start()
     {
         _audioSource = GetComponent<AudioSource>();
-        // _audioSource.clip = Microphone.Start("Built-in Microphone", true, 10, 44100);
-        // _audioSource.Play();
+        //_audioSource.clip = Microphone.Start("H4", true, 10, 44100); //Built-in Microphone
+        //_audioSource.Play();
         AudioProfile(_audioProfile);
     }
 
@@ -56,6 +56,8 @@ public class AudioDataDennis : MonoBehaviour
         BandBuffer();
         CreateAudioBands();
         GetAmplitude();
+
+        //Debug.Log(_freqBand[0]);
     }
 
     void AudioProfile(float audioProfile)
@@ -78,31 +80,125 @@ public class AudioDataDennis : MonoBehaviour
 
         for(int i = 0; i < 4; i++)
         {
-            float average = 0;
-            int sampleCount = (int)Mathf.Pow(2, i) * 2;
+            if (i == 0)
+            {
 
-            if( i == 3)
-            {
-                sampleCount += 2;
+                float average = 0;
+                int sampleCount = 2;
+
+
+
+                for (int j = 0; j < sampleCount; j++)
+                {
+                    if (channel == _channel.Stereo)
+                    {
+                        average += _samplesLeft[count] + _samplesRight[count] * (count + 1);
+                    }
+                    if (channel == _channel.Left)
+                    {
+                        average += _samplesLeft[count] * (count + 1);
+                    }
+                    if (channel == _channel.Right)
+                    {
+                        average += _samplesRight[count] * (count + 1);
+                    }
+                    count++;
+                }
+                average /= count;
+                _freqBand[i] = average * 10;
+
+                Debug.Log("i is 0");
             }
-            for(int j = 0; j < sampleCount; j++)
+
+            if (i == 1)
             {
-                if(channel == _channel.Stereo)
+
+                float average = 0;
+                int sampleCount = 8;
+
+
+
+                for (int j = 0; j < sampleCount; j++)
                 {
-                    average += _samplesLeft[count] + _samplesRight[count] * (count + 1);
+                    if (channel == _channel.Stereo)
+                    {
+                        average += _samplesLeft[count] + _samplesRight[count] * (count + 1);
+                    }
+                    if (channel == _channel.Left)
+                    {
+                        average += _samplesLeft[count] * (count + 1);
+                    }
+                    if (channel == _channel.Right)
+                    {
+                        average += _samplesRight[count] * (count + 1);
+                    }
+                    count++;
                 }
-                if(channel == _channel.Left)
-                {
-                    average += _samplesLeft[count] * (count + 1);
-                }
-                if(channel == _channel.Right)
-                {
-                    average += _samplesRight[count] * (count + 1);
-                }
-                count++;
+                average /= count;
+                _freqBand[i] = average * 10;
+
+                Debug.Log("i is 1");
             }
-            average /= count;
-            _freqBand[i] = average * 10;        
+
+            if (i == 2)
+            {
+
+                float average = 0;
+                int sampleCount = 44;
+
+
+
+                for (int j = 0; j < sampleCount; j++)
+                {
+                    if (channel == _channel.Stereo)
+                    {
+                        average += _samplesLeft[count] + _samplesRight[count] * (count + 1);
+                    }
+                    if (channel == _channel.Left)
+                    {
+                        average += _samplesLeft[count] * (count + 1);
+                    }
+                    if (channel == _channel.Right)
+                    {
+                        average += _samplesRight[count] * (count + 1);
+                    }
+                    count++;
+                }
+                average /= count;
+                _freqBand[i] = average * 10;
+
+                Debug.Log("i is 2");
+            }
+
+            if (i == 3)
+            {
+
+                float average = 0;
+                int sampleCount = 456;
+
+
+
+                for (int j = 0; j < sampleCount; j++)
+                {
+                    if (channel == _channel.Stereo)
+                    {
+                        average += _samplesLeft[count] + _samplesRight[count] * (count + 1);
+                    }
+                    if (channel == _channel.Left)
+                    {
+                        average += _samplesLeft[count] * (count + 1);
+                    }
+                    if (channel == _channel.Right)
+                    {
+                        average += _samplesRight[count] * (count + 1);
+                    }
+                    count++;
+                }
+                average /= count;
+                _freqBand[i] = average * 10;
+
+                Debug.Log("i is 3");
+            }
         }
     }
 
