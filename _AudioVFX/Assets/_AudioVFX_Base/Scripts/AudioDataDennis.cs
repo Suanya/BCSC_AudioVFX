@@ -107,7 +107,7 @@ public class AudioDataDennis : MonoBehaviour
                 average /= count;
                 _freqBand[i] = average * 10;
 
-                Debug.Log("i is 0");
+              
             }
 
             if (i == 1)
@@ -137,7 +137,7 @@ public class AudioDataDennis : MonoBehaviour
                 average /= count;
                 _freqBand[i] = average * 10;
 
-                Debug.Log("i is 1");
+               
             }
 
             if (i == 2)
@@ -167,7 +167,7 @@ public class AudioDataDennis : MonoBehaviour
                 average /= count;
                 _freqBand[i] = average * 10;
 
-                Debug.Log("i is 2");
+          
             }
 
             if (i == 3)
@@ -197,7 +197,6 @@ public class AudioDataDennis : MonoBehaviour
                 average /= count;
                 _freqBand[i] = average * 10;
 
-                Debug.Log("i is 3");
             }
         }
     }
