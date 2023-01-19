@@ -19,8 +19,8 @@ MonoBehaviour:
     serializedVersion: 2
     x: 1221
     y: -446
-    width: 3897
-    height: 3127
+    width: 5930
+    height: 3076
 --- !u!114 &114350483966674976
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -3693,7 +3693,7 @@ MonoBehaviour:
     linkedSlots:
     - outputSlot: {fileID: 8926484042661614791}
       inputSlot: {fileID: 8926484042661615074}
-    position: {x: 3938, y: 1299}
+    position: {x: 4057, y: 1503}
     expandedSlots: []
     expanded: 0
   - m_Id: 3
@@ -6021,7 +6021,7 @@ MonoBehaviour:
       m_Type:
         m_SerializableType: UnityEditor.VFX.Vector, Unity.VisualEffectGraph.Editor,
           Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
-      m_SerializableObject: '{"vector":{"x":-0.3330000042915344,"y":1.0,"z":-0.3330000042915344}}'
+      m_SerializableObject: '{"vector":{"x":-1.0,"y":2.0,"z":-1.0}}'
     m_Space: 0
   m_Property:
     name: A
@@ -8394,7 +8394,7 @@ MonoBehaviour:
       m_Type:
         m_SerializableType: System.Single, mscorlib, Version=4.0.0.0, Culture=neutral,
           PublicKeyToken=b77a5c561934e089
-      m_SerializableObject: 4
+      m_SerializableObject: 2
     m_Space: 2147483647
   m_Property:
     name: B
