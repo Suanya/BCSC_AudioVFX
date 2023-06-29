@@ -17,9 +17,9 @@ Shader "Unlit/MoveMaker"
 
         Pass 
         {
-            // Blending
+            // Blending 
             Cull Off
-            ZWrite Off   
+            ZWrite Off  
             Blend One One // additive
 
             CGPROGRAM
@@ -38,14 +38,14 @@ Shader "Unlit/MoveMaker"
 
             struct MeshData  // perVertex meshData    
             {  
-                float4 vertex : POSITION; // vertexPosition 
+                float4 vertex : POSITION; // vertexPosition   
                 float3 normals : NORMAL; // normalDirection of a vertex     
                 float4 uv0 : TEXCOORD0; // uv0 coordinates -> diffuse/normal map textures              
             };
 
-            struct Interpolaters // v2f     
+            struct Interpolaters // v2f        
             {           
-                float4 vertex : SV_POSITION; // clipSpacePosition of the vertex 
+                float4 vertex : SV_POSITION; // clipSpacePosition of the vertex      
                 float3 normal : TEXCOORD0;      
                 float2 uv : TEXCOORD1; 
             };
@@ -55,7 +55,7 @@ Shader "Unlit/MoveMaker"
                 Interpolaters o;
                 o.vertex = UnityObjectToClipPos(v.vertex); // localSpace to clipSpace  
                 o.normal = UnityObjectToWorldNormal(v.normals); // show normals of the object -> visualize normalDirections             
-                o.uv = v.uv0; // passTrough;  
+                o.uv = v.uv0; // passTrough;     
                 return o;  
             }
 
@@ -70,7 +70,7 @@ Shader "Unlit/MoveMaker"
             {
                 // blend between 2 colors based on the X UV coordinates with lerp 
                 float xOffset = cos(i.uv.x * TAU * 4) * 0.6;
-                float t = cos( (i.uv.y + xOffset + _Time.y * 0.1 ) * TAU * 5) * 0.5 + 0.5;
+                float t = cos( (i.uv.y + xOffset + _Time.y * 0.2 ) * TAU * 5) * 0.5 + 0.5;
                 t *= i.uv.y;
 
                 float topBottomRemover = (abs(i.normal.y) < 0.999);
