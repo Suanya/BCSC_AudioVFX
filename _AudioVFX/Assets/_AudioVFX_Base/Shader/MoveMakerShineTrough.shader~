@@ -1,4 +1,4 @@
-Shader "Unlit/MoveMaker"
+Shader "Unlit/MoveMakerShineTrough"
 {
     Properties        
     {       
@@ -19,8 +19,8 @@ Shader "Unlit/MoveMaker"
         {
             // Blending 
             Cull Off
-            // ZWrite Off  
-            // Blend One One // additive
+            ZWrite Off  
+            Blend One One // additive
 
             CGPROGRAM
             #pragma vertex vert
@@ -39,13 +39,13 @@ Shader "Unlit/MoveMaker"
             struct MeshData  // perVertex meshData    
             {  
                 float4 vertex : POSITION; // vertexPosition   
-                float3 normals : NORMAL; // normalDirection of a vertex     
+                float3 normals : NORMAL; // normalDirection of a vertex      
                 float4 uv0 : TEXCOORD0; // uv0 coordinates -> diffuse/normal map textures              
             };
 
             struct Interpolaters // v2f        
             {           
-                float4 vertex : SV_POSITION; // clipSpacePosition of the vertex      
+                float4 vertex : SV_POSITION; // clipSpacePosition of the vertex        
                 float3 normal : TEXCOORD0;      
                 float2 uv : TEXCOORD1; 
             };
@@ -53,7 +53,7 @@ Shader "Unlit/MoveMaker"
             Interpolaters vert (MeshData v)                                                          
             {
                 Interpolaters o;
-                o.vertex = UnityObjectToClipPos(v.vertex); // localSpace to clipSpace  
+                o.vertex = UnityObjectToClipPos(v.vertex); // localSpace to clipSpace   
                 o.normal = UnityObjectToWorldNormal(v.normals); // show normals of the object -> visualize normalDirections             
                 o.uv = v.uv0; // passTrough;     
                 return o;  
