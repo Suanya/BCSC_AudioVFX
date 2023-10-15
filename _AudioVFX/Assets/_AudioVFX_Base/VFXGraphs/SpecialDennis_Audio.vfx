@@ -716,7 +716,7 @@ MonoBehaviour:
   - {fileID: 8926484042661614682}
   - {fileID: 8926484042661614707}
   dataType: 0
-  capacity: 20
+  capacity: 200
   stripCapacity: 16
   particlePerStripCount: 16
   m_Space: 0
@@ -1141,7 +1141,7 @@ MonoBehaviour:
       m_Type:
         m_SerializableType: System.Single, mscorlib, Version=4.0.0.0, Culture=neutral,
           PublicKeyToken=b77a5c561934e089
-      m_SerializableObject: 0.2
+      m_SerializableObject: 2
     m_Space: 2147483647
   m_Property:
     name: A
@@ -1175,7 +1175,7 @@ MonoBehaviour:
       m_Type:
         m_SerializableType: System.Single, mscorlib, Version=4.0.0.0, Culture=neutral,
           PublicKeyToken=b77a5c561934e089
-      m_SerializableObject: 0.2
+      m_SerializableObject: 4
     m_Space: 2147483647
   m_Property:
     name: B
@@ -1823,7 +1823,7 @@ MonoBehaviour:
       m_Type:
         m_SerializableType: UnityEditor.VFX.ArcSphere, Unity.VisualEffectGraph.Editor,
           Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
-      m_SerializableObject: '{"sphere":{"center":{"x":0.0,"y":1.0,"z":4.0},"radius":0.019999999552965165},"arc":1.4800000190734864}'
+      m_SerializableObject: '{"sphere":{"center":{"x":-1.0,"y":0.0,"z":4.0},"radius":0.019999999552965165},"arc":1.4800000190734864}'
     m_Space: 0
   m_Property:
     name: ArcSphere
@@ -2122,7 +2122,7 @@ MonoBehaviour:
       m_Type:
         m_SerializableType: System.Single, mscorlib, Version=4.0.0.0, Culture=neutral,
           PublicKeyToken=b77a5c561934e089
-      m_SerializableObject: 1
+      m_SerializableObject: 2
     m_Space: 2147483647
   m_Property:
     name: A
@@ -2156,7 +2156,7 @@ MonoBehaviour:
       m_Type:
         m_SerializableType: System.Single, mscorlib, Version=4.0.0.0, Culture=neutral,
           PublicKeyToken=b77a5c561934e089
-      m_SerializableObject: 4
+      m_SerializableObject: 2
     m_Space: 2147483647
   m_Property:
     name: B
@@ -2260,7 +2260,7 @@ MonoBehaviour:
       m_Type:
         m_SerializableType: UnityEditor.VFX.Transform, Unity.VisualEffectGraph.Editor,
           Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
-      m_SerializableObject: '{"position":{"x":0.0,"y":-1.0,"z":0.0},"angles":{"x":10.0,"y":10.0,"z":10.0},"scale":{"x":21.0,"y":2.0,"z":2.0}}'
+      m_SerializableObject: '{"position":{"x":0.0,"y":-1.0,"z":0.0},"angles":{"x":10.0,"y":10.0,"z":10.0},"scale":{"x":2.0,"y":1.0,"z":-2.0}}'
     m_Space: 0
   m_Property:
     name: FieldTransform
@@ -2733,7 +2733,7 @@ MonoBehaviour:
       m_Type:
         m_SerializableType: System.Single, mscorlib, Version=4.0.0.0, Culture=neutral,
           PublicKeyToken=b77a5c561934e089
-      m_SerializableObject: 48
+      m_SerializableObject: 12
     m_Space: 2147483647
   m_Property:
     name: Drag
@@ -2869,7 +2869,7 @@ MonoBehaviour:
       m_Type:
         m_SerializableType: System.Single, mscorlib, Version=4.0.0.0, Culture=neutral,
           PublicKeyToken=b77a5c561934e089
-      m_SerializableObject: 12
+      m_SerializableObject: 2
     m_Space: 2147483647
   m_Property:
     name: lacunarity
@@ -6252,7 +6252,7 @@ MonoBehaviour:
       m_Type:
         m_SerializableType: System.Single, mscorlib, Version=4.0.0.0, Culture=neutral,
           PublicKeyToken=b77a5c561934e089
-      m_SerializableObject: 0.4
+      m_SerializableObject: 4
     m_Space: 2147483647
   m_Property:
     name: A
@@ -6286,7 +6286,7 @@ MonoBehaviour:
       m_Type:
         m_SerializableType: System.Single, mscorlib, Version=4.0.0.0, Culture=neutral,
           PublicKeyToken=b77a5c561934e089
-      m_SerializableObject: 1
+      m_SerializableObject: 4
     m_Space: 2147483647
   m_Property:
     name: B
@@ -6379,7 +6379,7 @@ MonoBehaviour:
       m_Type:
         m_SerializableType: System.Single, mscorlib, Version=4.0.0.0, Culture=neutral,
           PublicKeyToken=b77a5c561934e089
-      m_SerializableObject: 4
+      m_SerializableObject: 16
     m_Space: 2147483647
   m_Property:
     name: Rate
@@ -6604,7 +6604,7 @@ MonoBehaviour:
       m_Type:
         m_SerializableType: UnityEditor.VFX.Transform, Unity.VisualEffectGraph.Editor,
           Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
-      m_SerializableObject: '{"position":{"x":-2.5,"y":-0.5,"z":-2.0},"angles":{"x":2.0,"y":4.0,"z":2.0},"scale":{"x":2.0,"y":4.0,"z":2.0}}'
+      m_SerializableObject: '{"position":{"x":1.0,"y":-0.5,"z":-2.0},"angles":{"x":2.0,"y":4.0,"z":2.0},"scale":{"x":2.0,"y":0.6000000238418579,"z":2.0}}'
     m_Space: 0
   m_Property:
     name: FieldTransform
@@ -7927,7 +7927,7 @@ MonoBehaviour:
       m_Type:
         m_SerializableType: UnityEditor.VFX.ArcSphere, Unity.VisualEffectGraph.Editor,
           Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
-      m_SerializableObject: '{"sphere":{"center":{"x":-2.5,"y":0.0,"z":0.0},"radius":0.019999999552965165},"arc":6.28000020980835}'
+      m_SerializableObject: '{"sphere":{"center":{"x":-2.0,"y":0.0,"z":0.0},"radius":0.019999999552965165},"arc":6.28000020980835}'
     m_Space: 0
   m_Property:
     name: ArcSphere
@@ -8226,7 +8226,7 @@ MonoBehaviour:
       m_Type:
         m_SerializableType: System.Single, mscorlib, Version=4.0.0.0, Culture=neutral,
           PublicKeyToken=b77a5c561934e089
-      m_SerializableObject: 1
+      m_SerializableObject: 2
     m_Space: 2147483647
   m_Property:
     name: A
@@ -8260,7 +8260,7 @@ MonoBehaviour:
       m_Type:
         m_SerializableType: System.Single, mscorlib, Version=4.0.0.0, Culture=neutral,
           PublicKeyToken=b77a5c561934e089
-      m_SerializableObject: 2
+      m_SerializableObject: 4
     m_Space: 2147483647
   m_Property:
     name: B
@@ -11192,7 +11192,7 @@ MonoBehaviour:
       m_Type:
         m_SerializableType: UnityEditor.VFX.Transform, Unity.VisualEffectGraph.Editor,
           Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
-      m_SerializableObject: '{"position":{"x":0.0,"y":0.0,"z":0.0},"angles":{"x":2.0,"y":1.0,"z":2.0},"scale":{"x":1.0,"y":1.0,"z":2.0}}'
+      m_SerializableObject: '{"position":{"x":0.0,"y":0.0,"z":0.0},"angles":{"x":2.0,"y":1.0,"z":2.0},"scale":{"x":-2.0,"y":0.5,"z":2.0}}'
     m_Space: 0
   m_Property:
     name: FieldTransform
@@ -11665,7 +11665,7 @@ MonoBehaviour:
       m_Type:
         m_SerializableType: System.Single, mscorlib, Version=4.0.0.0, Culture=neutral,
           PublicKeyToken=b77a5c561934e089
-      m_SerializableObject: 20
+      m_SerializableObject: 12
     m_Space: 2147483647
   m_Property:
     name: Drag
@@ -11801,7 +11801,7 @@ MonoBehaviour:
       m_Type:
         m_SerializableType: System.Single, mscorlib, Version=4.0.0.0, Culture=neutral,
           PublicKeyToken=b77a5c561934e089
-      m_SerializableObject: 20
+      m_SerializableObject: 12
     m_Space: 2147483647
   m_Property:
     name: lacunarity
@@ -12514,7 +12514,7 @@ MonoBehaviour:
       m_Type:
         m_SerializableType: UnityEditor.VFX.ArcSphere, Unity.VisualEffectGraph.Editor,
           Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
-      m_SerializableObject: '{"sphere":{"center":{"x":1.75,"y":1.0,"z":0.0},"radius":0.019999999552965165},"arc":5.050000190734863}'
+      m_SerializableObject: '{"sphere":{"center":{"x":-1.0,"y":1.0,"z":0.0},"radius":0.019999999552965165},"arc":5.050000190734863}'
     m_Space: 0
   m_Property:
     name: ArcSphere
@@ -12813,7 +12813,7 @@ MonoBehaviour:
       m_Type:
         m_SerializableType: System.Single, mscorlib, Version=4.0.0.0, Culture=neutral,
           PublicKeyToken=b77a5c561934e089
-      m_SerializableObject: 2
+      m_SerializableObject: 4
     m_Space: 2147483647
   m_Property:
     name: A
@@ -12847,7 +12847,7 @@ MonoBehaviour:
       m_Type:
         m_SerializableType: System.Single, mscorlib, Version=4.0.0.0, Culture=neutral,
           PublicKeyToken=b77a5c561934e089
-      m_SerializableObject: 4
+      m_SerializableObject: 6
     m_Space: 2147483647
   m_Property:
     name: B
